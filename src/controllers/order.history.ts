@@ -53,7 +53,7 @@ export const getOrderHistory = async (req: Request, res: Response) => {
     return res.status(500).json({
       success: false,
       error: "Failed to fetch order history",
-      message: error.message,
+      message: error.message || "Internal server error",
     });
   }
 };

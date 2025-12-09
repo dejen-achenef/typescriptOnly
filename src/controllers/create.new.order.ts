@@ -137,8 +137,12 @@ export const createNewOrder = async (req: Request, res: Response) => {
       },
     });
   } catch (error: any) {
-    // Check if it's a stock validation error
-    if (error.message.includes("Insufficient stock") || error.message.includes("not found")) {
+    // Check if it's a stock validation or product not found error
+    const isClientError = 
+      error.message?.includes("Insufficient stock") || 
+      error.message?.includes("not found");
+
+    if (isClientError) {
       return res.status(400).json({
         success: false,
         error: error.message,
@@ -149,7 +153,7 @@ export const createNewOrder = async (req: Request, res: Response) => {
     return res.status(500).json({
       success: false,
       error: "Failed to create order",
-      message: error.message,
+      message: error.message || "Internal server error",
     });
   }
 };

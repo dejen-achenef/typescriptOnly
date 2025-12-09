@@ -38,9 +38,6 @@ export const getOrderHistory = async (req: Request, res: Response) => {
       order_id: order.id,
       status: order.status,
       total_price: order.totalPrice,
-      // Note: createdAt field is not in the schema
-      // To add it: update prisma/schema.prisma with createdAt DateTime @default(now())
-      // Then run: npx prisma migrate dev
     }));
 
     return res.status(200).json({

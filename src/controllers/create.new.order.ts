@@ -53,6 +53,7 @@ export const createNewOrder = async (req: Request, res: Response) => {
 
       for (const item of items) {
         const product = products.find((p) => p.id === item.productId);
+        
         if (!product) {
           throw new Error(`Product ${item.productId} not found`);
         }

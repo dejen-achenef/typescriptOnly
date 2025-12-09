@@ -10,7 +10,7 @@ export const createNewOrder = async (req: Request, res: Response) => {
   }
 
   const { items } = value;
-  const userId = (req as any).user?.id;
+  const userId = req.user?.id;
 
   if (!userId) {
     return res.status(401).json({ error: "User not authenticated" });
@@ -25,7 +25,7 @@ export const createNewOrder = async (req: Request, res: Response) => {
     return res.status(401).json({ error: "User not found" });
   }
 
-  if ((user as any).role && (user as any).role !== "User") {
+  if (user.role && user.role !== "User") {
     return res.status(403).json({ error: "Access denied. Only users with 'User' role can place orders." });
   }
 

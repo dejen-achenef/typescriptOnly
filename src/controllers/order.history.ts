@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import prisma from "../prisma/client";
 
 export const getOrderHistory = async (req: Request, res: Response) => {
-  const userId = (req as any).user?.id;
+  const userId = req.user?.id;
 
   if (!userId) {
     return res.status(401).json({ error: "Unauthorized - User not authenticated" });

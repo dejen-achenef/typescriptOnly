@@ -1,0 +1,12 @@
+{
+    "name": "@types/nodemon",
+    "version": "3.1.1",
+    "description": "Stub TypeScript definitions entry for nodemon, which provides its own types definitions",
+    "main": "",
+    "scripts": {},
+    "license": "MIT",
+    "dependencies": {
+        "nodemon": "*"
+    },
+    "deprecated": "This is a stub types definition. nodemon provides its own type definitions, so you do not need this installed."
+}

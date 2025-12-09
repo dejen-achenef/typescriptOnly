@@ -126,10 +126,10 @@ export const createNewOrder = async (req: Request, res: Response) => {
       success: true,
       message: "Order created successfully",
       order: {
-        order_id: result!.id,
-        status: result!.status,
-        total_price: result!.totalPrice,
-        products: result!.orderItems.map((item) => ({
+        order_id: result.id,
+        status: result.status,
+        total_price: result.totalPrice,
+        products: result.orderItems.map((item) => ({
           productId: item.productId,
           name: item.product.name,
           price: item.product.price,

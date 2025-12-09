@@ -14,19 +14,22 @@ import { getOrderHistory } from "../controllers/order.history";
 
 const router = Router();
 
-// Test route
-router.get("/test", (req, res) => {
-  res.json({ message: "Routes are working" });
-});
-
+// Auth routes
 router.post("/auth/register", Register);
 router.post("/auth/login", Login);
-router.post("/auth/post", authMiddleware,roleChecker, AddPost);
-router.post("/auth/update/:id", authMiddleware,roleChecker, updatePost);
+
+// Product routes (public)
 router.get("/auth/products", getProducts);
 router.get("/auth/search", searchProducts);
 router.get("/auth/product/:id", getProductDetail);
-router.delete("/auth/delete/:id", authMiddleware,roleChecker, deleteProduct);
+
+// Product routes (admin only)
+router.post("/auth/post", authMiddleware, roleChecker, AddPost);
+router.post("/auth/update/:id", authMiddleware, roleChecker, updatePost);
+router.delete("/auth/delete/:id", authMiddleware, roleChecker, deleteProduct);
+
+// Order routes (authenticated users)
 router.post("/orders", authMiddleware, createNewOrder);
 router.get("/orders", authMiddleware, getOrderHistory);
+
 export default router;

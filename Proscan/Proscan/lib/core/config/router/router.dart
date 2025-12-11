@@ -1,0 +1,33 @@
+import 'package:go_router/go_router.dart';
+import 'package:thyscan/core/services/auth_service.dart';
+import 'package:thyscan/features/auth/screens/forgotpassword.dart';
+import 'package:thyscan/features/auth/screens/login.dart'
+    hide ForgotPasswordScreen;
+import 'package:thyscan/features/auth/screens/resetpassword.dart';
+import 'package:thyscan/features/auth/screens/signup.dart';
+import 'package:thyscan/features/auth/screens/verifyotp.dart';
+import 'package:thyscan/features/help_and_support/presentation/screens/help_and_support.dart';
+import 'package:thyscan/features/home/presentation/screens/appmainscreen.dart';
+import 'package:thyscan/features/home/presentation/screens/homescreen.dart';
+import 'package:thyscan/features/home/presentation/screens/recent_scans_section.dart';
+import 'package:thyscan/features/home/presentation/screens/tools_screen.dart';
+import 'package:thyscan/features/onboarding/screens/onboarding.dart';
+import 'package:thyscan/features/profile/presentation/screens/edit_profile.dart';
+import 'package:thyscan/features/profile/presentation/screens/free_user.dart';
+import 'package:thyscan/features/profile/presentation/screens/guest_mode.dart';
+import 'package:thyscan/features/profile/presentation/screens/premium_user.dart';
+import 'package:thyscan/features/scan/model/scan_flow_models.dart';
+import 'package:thyscan/features/scan/presentation/screens/camera.dart';
+import 'package:thyscan/features/scan/presentation/screens/edit_scan.dart';
+import 'package:thyscan/features/scan/presentation/screens/save_pdf_screen.dart';
+import 'package:thyscan/features/scan/presentation/screens/text_editor_screen.dart';
+import 'package:thyscan/features/scan/presentation/screens/text_document_screen.dart';
+import 'package:thyscan/features/scan/presentation/screens/translation_editor_screen.dart';
+import 'package:thyscan/features/home/presentation/screens/search_screen.dart';
+import 'package:thyscan/features/home/presentation/screens/upload_queue_screen.dart';
+import 'package:thyscan/features/settings/presentation/screens/sync_settings_screen.dart';
+import 'package:thyscan/features/sync/presentation/screens/conflict_resolution_screen.dart';
+import 'package:thyscan/models/document_color_profile.dart';
+import 'package:thyscan/features/splash/screens/splash.dart';
+
+part 'router.main.dart';

@@ -1,0 +1,12 @@
+This is a placeholder for the DOCX template file. You'll need to create a proper .docx template using Microsoft Word with content controls:
+
+1. Open Microsoft Word
+2. Create a new document
+3. Go to Developer tab (enable it in Word Options if not visible)
+4. Insert a "Repeating Section Content Control"
+5. Set its tag to "pages"
+6. Inside it, add a "Plain Text Content Control" with tag "page"
+7. Inside that, add a "Picture Content Control" with tag "img"
+8. Save as document_template.docx
+
+For now, I'll create a basic binary placeholder. You'll need to replace this with an actual .docx file created in Word.

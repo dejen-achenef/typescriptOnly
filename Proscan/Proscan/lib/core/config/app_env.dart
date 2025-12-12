@@ -20,7 +20,7 @@ abstract class AppEnv {
   static String supabaseAnonKey = _AppEnv.supabaseAnonKey;
 
   @EnviedField(varName: 'GOOGLE_WEB_CLIENT_ID', obfuscate: true)
-  static String googleWebClientId = _AppEnv.googleWebClientId;
+  static String googleWebClientId = _AppEnv.googleWebCliendsdf;
 
   @EnviedField(varName: 'BACKEND_API_URL', obfuscate: true, optional: true)
   static String? backendApiUrl = _AppEnv.backendApiUrl;

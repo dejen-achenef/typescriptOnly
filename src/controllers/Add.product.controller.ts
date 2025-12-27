@@ -9,7 +9,7 @@ export const AddPost = async (req: Request, res: Response) => {
   }
 
   const { name, description, price, stock, category } = value;
-  
+
   // Get userId from request (set by auth middleware)
   const userId = req.user?.id;
   if (!userId) {
@@ -32,3 +32,5 @@ export const AddPost = async (req: Request, res: Response) => {
     return res.status(500).json({ error: "Failed to create product", message: error.message });
   }
 };
+
+//so this is the change i have made and dejen please accept it 
